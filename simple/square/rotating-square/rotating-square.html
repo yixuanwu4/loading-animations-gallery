@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotating Square</title>
+  <style>
+    :root {
+      --squareSize: 64px;
+      --squareColor: rgba(5, 217, 232, 1);
+      --bg-color: #121212;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: var(--bg-color);
+    }
+
+    .rotating-square {
+      width: var(--squareSize);
+      height: var(--squareSize);
+      background: var(--squareColor);
+      animation: rotate 3s infinite;
+      transition: all 2s;
+    }
+
+    @keyframes rotate {
+      0% { transform: perspective(120px) rotateX(0deg) rotateY(0deg); }
+      50% { transform: perspective(120px) rotateX(-180deg) rotateY(0deg); }
+      100% { transform: perspective(120px) rotateX(-180deg) rotateY(-180deg); }
+      }
+  </style>
+</head>
+<body>
+  <div class="rotating-square"></div>
+  
+</body>
+</html>
