@@ -5,18 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Basic Spinner</title>
   <style>
+    :root {
+      --targetSize: 80px;
+      --bg-color: #121212;
+      --border-color: #24d3dd;
+      --border-top-color: #DD2476;
+      --border-width: 6px;
+    }
+
     body{
       display: flex;
       align-items: center;
       justify-content: center;
       height: 100vh;
+      background-color: #121212;
     }
 
     div {
-      width: 40px;
-      height: 40px;
-      border: 4px solid rgb(226, 248, 245) ;
-      border-top: 4px solid Turquoise;
+      width: var(--targetSize);
+      height: var(--targetSize);
+      border: var(--border-width) solid var(--border-color) ;
+      border-top: var(--border-width) solid var(--border-top-color);
       border-radius: 50%;
       animation: spin 1s linear infinite;
     }
