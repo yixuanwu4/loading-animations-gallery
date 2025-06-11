@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Spinner 02</title>
+  <style>
+    :root {
+      --spinner-size: 80px;
+      --bg-color: #121212;
+      --border-color: #24d3dd;
+      --highlight-color: #DD2476;
+      --border-width: 6px;
+      --dot-size: 12px;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: var(--bg-color);
+    }
+
+    .spinner {
+      position: relative;
+      width: var(--spinner-size);
+      height: var(--spinner-size);
+      border: var(--border-width) solid var(--border-color);
+      border-radius: 50%;
+    }
+
+    .highlight {
+      position: absolute;
+      top: calc(50% - (var(--spinner-size) / 2 + var(--border-width) + var(--dot-size)/2));
+      left: 50%;
+      width: var(--dot-size);
+      height: var(--dot-size);
+      background-color: var(--highlight-color);
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      transform-origin: 50% calc(var(--spinner-size) / 2 + var(--border-width) + var(--dot-size));
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="spinner">
+    <div class="highlight"></div>
+  </div>
+</body>
+
+</html>
