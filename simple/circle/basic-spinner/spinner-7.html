@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Basic Spinner 02</title>
+  <title>Basic Spinner 07</title>
   <style>
     :root {
       --spinner-size: 80px;
@@ -44,9 +44,21 @@
       animation: spin 1s linear infinite;
     }
 
+    .highlight-opposite {
+      transform: translate(-50%, -50%) rotate(180deg);
+      animation: spin 1s linear infinite;
+      animation-name: spin-opposite;
+    }
+
     @keyframes spin {
       100% {
         transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+
+    @keyframes spin-opposite {
+      100% {
+        transform: translate(-50%, -50%) rotate(540deg);
       }
     }
   </style>
@@ -55,6 +67,7 @@
 <body>
   <div class="spinner">
     <div class="highlight"></div>
+    <div class="highlight highlight-opposite"></div>
   </div>
 </body>
 
