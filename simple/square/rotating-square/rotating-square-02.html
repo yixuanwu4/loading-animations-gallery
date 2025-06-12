@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rotating Square 02</title>
+  <style>
+    :root {
+      --square-size: 64px;
+      --squareColor: rgba(5, 217, 232, 1);
+      --bg-color: #121212;
+      --border-width: 2px;
+      --squares-size: 80px;
+    }
+  
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: var(--bg-color);
+    }
+
+    .squares {
+      position: relative;
+      height: var(--squares-size);
+      width: var(--squares-size);
+    }
+  
+    .rotating-square {
+      position: absolute;
+      width: var(--square-size);
+      height: var(--square-size);
+      border-color: white;
+      border-width: var(--border-width);
+      border-style: solid;
+      animation: rotate-1 3s infinite;
+      transition: all 2s;
+    }
+
+    .square-2 {
+      border-color: var(--squareColor);
+      animation: rotate-2 3s infinite;
+      transition: all 2s;
+    }
+  
+    @keyframes rotate-1 {
+      0%{
+        transform: rotateZ(0deg);
+      }
+  
+      50%, 75%, 100% {
+        transform: rotateZ(180deg);
+      }
+    }
+
+    @keyframes rotate-2 {
+      0%, 50%{
+        transform: rotateZ(-45deg);
+      }
+
+      75% {
+        transform: rotateZ(0deg);
+      }
+
+      100% {
+        transform: rotateZ(45deg);
+      }
+    }
+  </style>
+  </head>
+  
+  <body>
+    <div class="squares">
+      <div class="rotating-square"></div>
+      <div class="rotating-square square-2"></div>
+    </div>
+  </body>
+  
+  </html>
