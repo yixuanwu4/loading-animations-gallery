@@ -33,7 +33,7 @@ No build setup required — just open in your browser!
 4. Optionally, modify it and create your own version!
 
 ```bash
-git clone https://github.com/your-username/Loading-Animations-Gallery.git
+git clone https://github.com/yixuanwu4/Loading-Animations-Gallery.git
 ```
 
 > You can also use the built-in `.devcontainer` to open the project directly in a pre-configured VSCode environment.
@@ -80,4 +80,4 @@ Here are a few of the animations included:
 
 ## License
 
-MIT — feel free to use and share!
+MIT
